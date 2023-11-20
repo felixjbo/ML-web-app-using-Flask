@@ -3,7 +3,7 @@ from pickle import load
 import pandas as pd
 
 app = Flask(__name__)
-model = load(open("../models/relu_adam_42.pkl", "rb"))
+model = load(open("../decision_tree_classifier_default_42.sav", "rb"))
 
 @app.route("/", methods = ["GET", "POST"])
 def index():
