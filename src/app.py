@@ -3,16 +3,15 @@ from pickle import load
 import pandas as pd
 
 app = Flask(__name__)
-model = load(open("/workspaces/ml-web-app-using-flask/models/relu_adam_42.pkl", "rb"))
+model = load(open("../models/relu_adam_42.pkl", "rb"))
 
 @app.route("/", methods = ["GET", "POST"])
 def index():
     if request.method == "POST":
-        
         HighBP = float(request.form["HighBP"])
-        HighChol = str(request.form["HighChol"])
-        BMI = str(request.form["BMI"])
-        Smoker = str(request.form["Smoker"])
+        HighChol = float(request.form["HighChol"])
+        BMI = float(request.form["BMI"])
+        Smoker = float(request.form["Smoker"])
         Stroke = float(request.form["Stroke"])
         Diabetes = float(request.form["Diabetes"])
         PhysActivity = float(request.form["PhysActivity"])
