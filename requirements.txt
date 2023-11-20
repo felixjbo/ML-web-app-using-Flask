@@ -61,3 +61,4 @@ werkzeug==3.0.1
 xgboost==2.0.1
 zipp==3.17.0
 opendatasets
+TensorFlow
