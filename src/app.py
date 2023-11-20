@@ -3,7 +3,7 @@ from pickle import load
 import pandas as pd
 
 app = Flask(__name__)
-model = load(open("../models/relu_adam_42.pkl", "rb"))
+model = load(open("/workspaces/ml-web-app-using-flask/models/relu_adam_42.pkl", "rb"))
 
 @app.route("/", methods = ["GET", "POST"])
 def index():
