@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diamond - Model Price prediction</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f4f4f4;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+        }
+        input[type="number"] {
+            width: 20%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="string"] {
+            width: 20%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        h3 {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Introduce the values</h2>
+    
+    <form action="/" method="post">
+        HighBP: <input type="number" step="any" name="HighBP" required><br><br>
+        HighChol: <input type="string" step="any" name="HighChol" required><br><br>
+        BMI: <input type="string" step="any" name="BMI" required><br><br>
+        Smoker: <input type="string" step="any" name="Smoker" required><br><br>
+        Stroke: <input type="number" step="any" name="Stroke" required><br><br>
+        Diabetes: <input type="number" step="any" name="Diabetes" required><br><br>
+        PhysActivity: <input type="number" step="any" name="PhysActivity" required><br><br>
+        HvyAlcoholConsump: <input type="number" step="any" name="HvyAlcoholConsump" required><br><br>
+        Sex: <input type="number" step="any" name="Sex" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    
+    {% if prediction != None %}
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
